@@ -41,23 +41,16 @@ const Add = (props) => {
         <Wrapper>
             <h3>Add ingredient to your meal</h3>
             <form id="add-ingredient-form" onSubmit={handleSubmit(onSubmit)}>
-                <Row>
-                    <label>Ingredient: </label>
-                    <Column>
-                        <BasicInput name="name" placeholder="e.g. onion" ref={register({required: true})}/>
-                        {errors.name && <Warning>This field is required</Warning>}
-                    </Column>
+                <label>Ingredient: </label>
+                <BasicInput name="name" placeholder="e.g. onion" ref={register({required: true})}/>
+                {errors.name && <Warning>This field is required</Warning>}
 
-                    <label>Weight: </label>
-                    <Column>
-                        <NumberInput name="weight" type="number" placeholder="100" min="1"
-                                     ref={register({required: true})}/>
-                        {errors.weight && <Warning>This field is required</Warning>}
-                    </Column>
-                    <span>g</span>
-                    <MenuButton type="submit"> Add </MenuButton>
-                </Row>
-
+                <label>Weight: </label>
+                <NumberInput name="weight" type="number" placeholder="100" min="1"
+                             ref={register({required: true})}/>
+                {errors.weight && <Warning>This field is required</Warning>}
+                <span>g</span>
+                <MenuButton type="submit"> Add </MenuButton>
             </form>
         </Wrapper>
     )
