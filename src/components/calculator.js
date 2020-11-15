@@ -13,7 +13,7 @@ margin-top: 30px;
 `
 
 const Calculator = () => {
-    const API_URL = "http://localhost:8080/api/nutrition"
+    const API_URL = "https://jakubkopka-api.herokuapp.com/api/nutrition"
     const [data, setData] = useState([]);
     const [summary, setSummary] = useState([])
     const [error, setError] = useState("")
